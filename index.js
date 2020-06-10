@@ -1,11 +1,12 @@
 $(document).ready(function() {
-
+    // global variables, will need first
     var today = moment().format("dddd, MMMM Do YYYY");
 
     var now = moment().format("hh:mm a");
 
     console.log(now);
 
+    // Renders times in hour blocks
     $("#currentDay").text(today);
     $("#hour-01 div:first-child").append(moment({ hour: 1, minute: 00 }).format("hh:mm A"));
     $("#hour-02 div:first-child").append(moment({ hour: 2, minute: 00 }).format("hh:mm A"));
@@ -32,8 +33,39 @@ $(document).ready(function() {
     $("#hour-23 div:first-child").append(moment({ hour: 23, minute: 00 }).format("hh:mm A"));
     $("#hour-24 div:first-child").append(moment({ hour: 24, minute: 00 }).format("hh:mm A"));
 
+    $(".saveBtn").on("click", function() {
+        // These variables are declared using sibling/parent to cut down on code; otherwise a line for each hour block would be required 
+        var value = $(this).siblings(".description").val();
+        var time = $(this).parent().attr("id");
 
+        // save in localStorage
+        localStorage.setItem(time, value);
+    });
 
+    $("#hour-01 .description").val(localStorage.getItem("hour-01"));
+    $("#hour-02 .description").val(localStorage.getItem("hour-02"));
+    $("#hour-03 .description").val(localStorage.getItem("hour-03"));
+    $("#hour-04 .description").val(localStorage.getItem("hour-04"));
+    $("#hour-05 .description").val(localStorage.getItem("hour-05"));
+    $("#hour-06 .description").val(localStorage.getItem("hour-06"));
+    $("#hour-07 .description").val(localStorage.getItem("hour-07"));
+    $("#hour-08 .description").val(localStorage.getItem("hour-08"));
+    $("#hour-09 .description").val(localStorage.getItem("hour-09"));
+    $("#hour-10 .description").val(localStorage.getItem("hour-10"));
+    $("#hour-11 .description").val(localStorage.getItem("hour-11"));
+    $("#hour-12 .description").val(localStorage.getItem("hour-12"));
+    $("#hour-13 .description").val(localStorage.getItem("hour-13"));
+    $("#hour-14 .description").val(localStorage.getItem("hour-14"));
+    $("#hour-15 .description").val(localStorage.getItem("hour-15"));
+    $("#hour-16 .description").val(localStorage.getItem("hour-16"));
+    $("#hour-17 .description").val(localStorage.getItem("hour-17"));
+    $("#hour-18 .description").val(localStorage.getItem("hour-18"));
+    $("#hour-19 .description").val(localStorage.getItem("hour-19"));
+    $("#hour-20 .description").val(localStorage.getItem("hour-20"));
+    $("#hour-21 .description").val(localStorage.getItem("hour-21"));
+    $("#hour-22 .description").val(localStorage.getItem("hour-22"));
+    $("#hour-23 .description").val(localStorage.getItem("hour-23"));
+    $("#hour-24 .description").val(localStorage.getItem("hour-24"));
 
 
 
