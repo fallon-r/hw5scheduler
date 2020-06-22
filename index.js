@@ -2,7 +2,7 @@ $(document).ready(function() {
     // global variables, will need first
     var today = moment().format("dddd, MMMM Do YYYY");
 
-    var now = moment().format("hh:mm a");
+    var now = moment().format("hh:mm:ss a");
 
     console.log(now);
 
@@ -42,6 +42,8 @@ $(document).ready(function() {
         localStorage.setItem(time, value);
     });
 
+
+    // Retrieve Stored local storage if it exists
     $("#hour-01 .description").val(localStorage.getItem("hour-01"));
     $("#hour-02 .description").val(localStorage.getItem("hour-02"));
     $("#hour-03 .description").val(localStorage.getItem("hour-03"));
@@ -67,7 +69,12 @@ $(document).ready(function() {
     $("#hour-23 .description").val(localStorage.getItem("hour-23"));
     $("#hour-24 .description").val(localStorage.getItem("hour-24"));
 
+    // Timeliness function: the logic of the app
+    function hourLogic() {
 
+    }
+
+    hourLogic();
 
 
 });
