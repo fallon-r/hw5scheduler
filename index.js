@@ -72,6 +72,7 @@ $(document).ready(function() {
 
     // Timeliness function: the logic of the app
     function hourLogic() {
+        //Goes over each element with the timeblock class. It then parses the id to get the hour from the ID rather than looking at the content/moments therein
         $(".time-block").each(function (){
             var blockHour = parseInt($(this).attr("id").split("-")[1]);
             console.log(blockHour);
@@ -91,6 +92,10 @@ $(document).ready(function() {
     }
 
     hourLogic();
+
+// Makes sure the hour logic is current; checks every 60 seconds
+
+var interval = setInterval(hourLogic, 60000);
 
 
 });
