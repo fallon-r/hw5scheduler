@@ -3,6 +3,7 @@ $(document).ready(function() {
     var today = moment().format("dddd, MMMM Do YYYY");
 
     var now = moment().format("hh:mm:ss a");
+    var currentHour = moment().hour();
 
     console.log(now);
 
@@ -71,7 +72,22 @@ $(document).ready(function() {
 
     // Timeliness function: the logic of the app
     function hourLogic() {
+        $(".time-block").each(function (){
+            var blockHour = parseInt($(this).attr("id").split("-")[1]);
+            console.log(blockHour);
+            if(blockHour < currentHour){
+                $(this).addClass("past");
+            } else if (blockHour === currentHour){
+                $(this).addClass("present");
+                $(this).removeClass("past");
+            } else {
+                $(this).addClass("future");
+                $(this).removeClass("past");
+                $(this).removeClass("present")
 
+            }
+            
+        })
     }
 
     hourLogic();
