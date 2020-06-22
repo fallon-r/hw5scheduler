@@ -75,7 +75,7 @@ $(document).ready(function() {
         //Goes over each element with the timeblock class. It then parses the id to get the hour from the ID rather than looking at the content/moments therein
         $(".time-block").each(function (){
             var blockHour = parseInt($(this).attr("id").split("-")[1]);
-            console.log(blockHour);
+            // console.log(blockHour);
             if(blockHour < currentHour){
                 $(this).addClass("past");
             } else if (blockHour === currentHour){
@@ -96,6 +96,10 @@ $(document).ready(function() {
 // Makes sure the hour logic is current; checks every 60 seconds
 
 var interval = setInterval(hourLogic, 60000);
+// scrollspies to the block that is most current
+$('#timeblocks').animate({
+    scrollTop: ($('.present').offset().top)
+},500);
 
 
 });

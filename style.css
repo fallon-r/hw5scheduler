@@ -15,8 +15,9 @@ textarea {
 
 #timeblocks {
     max-height: 60vh;
-    overflow-y: hidden;
+    overflow-y: scroll;
     scrollbar-width: 0px;
+    max-width: 100%;
 }
 
 #timeblocks::-webkit-scrollbar {
