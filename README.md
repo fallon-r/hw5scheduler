@@ -13,3 +13,7 @@ Despite this project's relative simplicity, there are some cool tricks implement
     This obviously cut down on the number of keystrokes, and made it a lot easier to generate 24 timeblocks. The `$` in the hour id is dynamic and matches up with the multiplier at the end. 
 
 Despite the simplicity of this project, one difficulty was making this page responsive. It is not currently optimized for small phone sized screens, but this is something I will likely address at a later time. 
+
+Ultimately, the main focus of this project was becoming familiar with [MomentJS](https://momentjs.com/) and getting comfortable reading documentation. I appreciated how easy it made some of the components, and I shudder to think of how this would be built using `new Date` or something like it.
+
+![Bill Murray smashing his alarm clock in Groundhog Day](https://giphy.com/gifs/fuEbh3lzH1ryeIdikI/html5)
