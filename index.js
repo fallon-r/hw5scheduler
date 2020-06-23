@@ -97,11 +97,9 @@ $(document).ready(function() {
 
 var interval = setInterval(hourLogic, 60000);
 // scrollspies to the block that is most current
-// $('#timeblocks').animate({
-//     scrollTop: ($('#hour-14').offset().top)
-// },300);
-var presentBlock = $(".present")
-$('#timeblocks').scrollTop(presentBlock.offset().top);
-$('#timeblocks').scrollLeft(presentBlock.offset().left);
+$('#timeblocks').animate({
+    scrollTop: ($('.present').offset().top)
+},500);
+
 
 });
