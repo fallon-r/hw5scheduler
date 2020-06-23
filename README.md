@@ -16,4 +16,4 @@ Despite the simplicity of this project, one difficulty was making this page resp
 
 Ultimately, the main focus of this project was becoming familiar with [MomentJS](https://momentjs.com/) and getting comfortable reading documentation. I appreciated how easy it made some of the components, and I shudder to think of how this would be built using `new Date` or something like it.
 
-![Bill Murray smashing his alarm clock in Groundhog Day](https://giphy.com/gifs/fuEbh3lzH1ryeIdikI/html5)
+![Bill Murray smashing his alarm clock in Groundhog Day](https://media.giphy.com/media/fuEbh3lzH1ryeIdikI/giphy.gif)
